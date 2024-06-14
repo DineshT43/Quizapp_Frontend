@@ -2,6 +2,7 @@ import "./Auth.css";
 import { useAuth } from "../../context";
 import { loginHandler } from "../../services/auth-service";
 import { useNavigate } from "react-router-dom";
+import { type } from "@testing-library/user-event/dist/type";
 
 export const AuthLogin = () => {
 
@@ -19,6 +20,13 @@ export const AuthLogin = () => {
     const handlePasswordChange = (e) => {
         authDispatch({
             type: "PASSWORD",
+            payload: e.target.value
+        })
+    }
+
+    const handleEmailChange = (e) => {
+        authDispatch({
+            type: "EMAIL",
             payload: e.target.value
         })
     }
@@ -60,10 +68,14 @@ export const AuthLogin = () => {
                     </div>
                     <div className="form-container">
                         <label className="form-label">Password</label>
-                        <input value={password} className="form-input lh-ls" placeholder="*******" onChange={handlePasswordChange}/>
+                        <input value={password} className="form-input lh-ls" placeholder="Your Password" onChange={handlePasswordChange}/>
+                    </div>
+                    <div className="form-container">
+                        <label className="form-label">Password</label>
+                        <input value={email} className="form-input lh-ls" placeholder="Your Email" onChange={handleEmailChange}/>
                     </div>
                     <div className="cta">
-                        <button className="button login-btn btn-margin cursor sign-up-btn">Login</button>
+                        <button className="button login-btn btn-margin cursor sign-up-btn">Signup</button>
                     </div>
                 </form>
                 <div>

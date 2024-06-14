@@ -12,7 +12,7 @@ export const Home = () => {
                 const {
                     data: { data },
                 } = await axios.get(
-                    "https://busy-pear-panda-gown.cyclic.app/categories"
+                    "https://quizapp-backend-1oq8.onrender.com/categories"
                 );
                 setCategories(data);
             } catch (err) {

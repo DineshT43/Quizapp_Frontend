@@ -11,7 +11,7 @@ export const Quiz = () => {
             try {
                 const {
                     data: { data },
-                } = await axios.get("https://busy-pear-panda-gown.cyclic.app/quiz", {
+                } = await axios.get("https://quizapp-backend-1oq8.onrender.com/quiz", {
                     headers: { authorization: localStorage.getItem("token") },
                 });
                 const filteredData =
@@ -29,7 +29,7 @@ export const Quiz = () => {
                 console.log(err);
             }
         })();
-    }, []);
+    }, [quizCategory, quizDispatch]);
 
     return (
         <Fragment>
