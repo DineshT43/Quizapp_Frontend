@@ -38,8 +38,8 @@ export const AuthLogin = () => {
         })
     }
 
-    const handleTestCredentialsClick = () => {
-        const token = loginHandler("krishna", "krsna12345");
+    const handleTestCredentialsClick = async () => {
+        const token = await loginHandler("krishna", "krsna12345");
         authDispatch({
             type: "TOKEN",
             payload: token
