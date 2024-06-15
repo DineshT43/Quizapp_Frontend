@@ -56,11 +56,11 @@ export const AuthLogin = () => {
                 <form onSubmit={handleLoginClick}>
                     <div className="form-container">
                         <label className="form-label">Username</label>
-                        <input value={username} className="form-input lh-ls" placeholder="Your Name" onChange={handleUserNameChange}/>
+                        <input value={username} className="form-input lh-ls" placeholder="dinesh" onChange={handleUserNameChange}/>
                     </div>
                     <div className="form-container">
                         <label className="form-label">Password</label>
-                        <input value={password} className="form-input lh-ls" placeholder="*******" onChange={handlePasswordChange}/>
+                        <input value={password} className="form-input lh-ls" placeholder="dsh12345" onChange={handlePasswordChange}/>
                     </div>
                     <div className="cta">
                         <button className="button login-btn btn-margin cursor sign-up-btn">Login</button>
